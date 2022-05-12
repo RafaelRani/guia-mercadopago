@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "mercadopago": "^1.5.13"
+  },
+  "name": "mercadopago2022",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rafael Rani",
+  "license": "ISC",
+  "description": "Projeto para realizar comunicação com o mercadeo pago e realizar pagamentos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelRani/guia-pagamentos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RafaelRani/guia-pagamentos/issues"
+  },
+  "homepage": "https://github.com/RafaelRani/guia-pagamentos#readme"
+}
