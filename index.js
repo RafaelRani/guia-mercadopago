@@ -1,6 +1,5 @@
 const express = require("express")
 const mercadoPago = require("mercadopago")
-const { isBooleanObject } = require("util/types")
 const app = express()
 
 mercadoPago.configure({ //configurações da biblioteca do mercado pago
