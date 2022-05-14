@@ -62,8 +62,10 @@ app.post("/not", (req, res) =>{
             var pagamento = data.body.results[0]
             if(pagamento != undefined){
                 console.log(pagamento)
+                console.log(pagamento.external_reference)
+                console.log(pagamento.status) //approved: sucesso
             }else{
-                console.log("pagamento não existe")
+                console.log("pagamento não existe!")
             }
             console.log(data)
         }).catch(err => {
