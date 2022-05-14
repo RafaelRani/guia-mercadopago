@@ -41,7 +41,7 @@ app.get("/pagar", async (req, res) =>{
 
     try{
         var pagamento = await mercadoPago.preferences.create(dados) //criar o pagamento
-        //console.log(pagamento) //ver o que foi gerado
+        console.log(pagamento) //ver o que foi gerado
         //banco.salvarPagamento({id: id, pagador: emailDoPagador}) //se for trabalhar com bd
         return res.redirect(pagamento.body.init_point) //redirecionar o usuário para a URL de checkout
     }catch(err){
