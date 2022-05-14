@@ -61,7 +61,6 @@ app.post("/not", (req, res) =>{
         }).then(data => {
             var pagamento = data.body.results[0]
             if(pagamento != undefined){
-                console.log(pagamento)
                 console.log(pagamento.external_reference)
                 console.log(pagamento.status) //approved: sucesso
             }else{
@@ -78,3 +77,5 @@ app.post("/not", (req, res) =>{
 app.listen(80, (req, res) =>{ //porta 80: padrão da web
     console.log("Servidor rodando!")
 })
+
+//falta apenas configurar no mercado pago o url de notificação de pagamento (ipn notifications)
