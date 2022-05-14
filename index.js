@@ -50,7 +50,26 @@ app.get("/pagar", async (req, res) =>{
 })
 
 app.post("/not", (req, res) =>{
-    console.log(req.query)
+    var id = req.query.id
+    setTimeout(() => {
+        var filtro = {
+            "order.id": id
+        }
+
+        mercadoPago.payment.search({
+            qs: filtro
+        }).then(data => {
+            var pagamento = data.body.results[0]
+            if(pagamento != undefined){
+                console.log(pagamento)
+            }else{
+                console.log("pagamento não existe")
+            }
+            console.log(data)
+        }).catch(err => {
+            console.log(err)
+        })
+    },20000)
     res.send("ok") //resposta que recebeu a notificação
 })
 
